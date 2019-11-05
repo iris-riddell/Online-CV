@@ -1,10 +1,20 @@
-.error {
-  color: red;
-  font-weight: bold;
+.app {
+  background-color: firebrick
 }
 
-.wait-indicator {
-  position: absolute;
-  margin-left: 5px;
-  width: 20px;
+.header {
+  background-color: blue;
+  color: red
 }
+
+.footer {
+  background-color: green;
+  color: purple
+}
+
+.nav {
+  background-color: pink;
+  color: orangered
+}
+
+

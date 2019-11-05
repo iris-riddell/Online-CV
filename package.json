@@ -4,10 +4,20 @@
   "description": "React Redux with simple async action",
   "main": "server/index",
   "scripts": {
-    "dev": "nodemon --watch server & webpack --watch",
-    "test": "jest --watchAll",
-    "start": "node server",
-    "postinstall": "webpack"
+    "build": "webpack --config webpack.config.js",
+    "client": "webpack-dev-server --hot --inline",
+    "dev": "run-p dev:server dev:client",
+    "dev:server": "nodemon .",
+    "dev:client": "webpack --config webpack.config.js --watch",
+    "server": "run-s build start",
+    "start": "node .",
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "knex": "knex --knexfile server/db/knexfile.js",
+    "db:reset": "run-s db:delete db:migrate db:seed",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
+    "db:delete": "rm -f server/db/dev.sqlite3"
   },
   "author": "EDA",
   "license": "ISC",
@@ -22,7 +32,8 @@
     ]
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

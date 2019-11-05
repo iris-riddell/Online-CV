@@ -1,17 +1,14 @@
 import React from 'react'
 
-import ErrorMessage from './ErrorMessage'
-import LoadSubreddit from './LoadSubreddit'
-import SubredditList from './SubredditList'
-import WaitIndicator from './WaitIndicator'
+import Header from './Header'
+import Footer from './Footer'
+import NavSidebar from './NavSidebar'
 
 const App = () => (
   <div className='app'>
-    <ErrorMessage />
-    <LoadSubreddit>
-      <WaitIndicator />
-    </LoadSubreddit>
-    <SubredditList />
+    <Header />
+    <NavSidebar />
+    <Footer />
   </div>
 )
 
