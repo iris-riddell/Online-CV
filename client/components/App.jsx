@@ -5,10 +5,12 @@ import Footer from './Footer'
 import NavSidebar from './NavSidebar'
 
 const App = () => (
-  <div className='app'>
+  <div className='body'>
+    <p>Hi</p>
     <Header />
-    <NavSidebar />
     <Footer />
+    <NavSidebar />
+    
   </div>
 )
 
