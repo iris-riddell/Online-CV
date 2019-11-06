@@ -48,4 +48,16 @@ body {
   display: inline-block;
 }
 
+.purplebox {
+  background-color: #7158e2;
+  color: orangered;
+  position: fixed;
+  opacity: 0.6;
+  height: 100%;
+  width: 50vh;
+  right: 0;
+  top: 0;
+  bottom: 0
+}
+
 
