@@ -2,6 +2,8 @@ import React from 'react'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import RaisedButton from 'material-ui/RaisedButton'
+import MenuRoundedIcon from '@material-ui/icons/MenuRounded'
+// import Icon from '@material-ui/core/Icon'
 import { MuiThemeProvider } from 'material-ui/styles'
 
 class MenuDrawer extends React.Component {
@@ -14,13 +16,18 @@ class MenuDrawer extends React.Component {
 
   handleClose = () => this.setState({open: false})
 
+
+  
   render() {
     return (
       <MuiThemeProvider>
-        <RaisedButton
-          label="Open Drawer"
-          onClick={this.handleToggle}
-        />
+        <RaisedButton label="Open Drawer"
+          onClick={this.handleToggle}>
+        
+        <MenuRoundedIcon />
+        </RaisedButton>
+          
+        
         <Drawer
           docked={false}
           width={200}
